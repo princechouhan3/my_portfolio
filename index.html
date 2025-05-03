@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AI Agent Developer & Full-Stack Engineer portfolio showcasing skills in AI, web development, and automation.">
+  <meta property="og:title" content="Your Name | AI Agent & Web Developer">
+  <meta property="og:description"
+    content="A professional portfolio to showcase AI development, web projects, and more.">
+  <meta property="og:image" content="your_image_url_here">
+  <title>Prince Chouhan | AI Agent & Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <h1 class="logo">Prince Chouhan</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#what-i-build">What I Build</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero reveal">
+    <div class="container">
+      <h2>AI Agent Developer & Full-Stack Engineer</h2>
+      <p>Creating intelligent, scalable, and modern digital solutions using JavaScript, Python, and AI technologies.</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section reveal">
+    <div class="about-container">
+      <img src="image.jpg" alt="Prince Chouhan" class="about-photo" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m an AI Agent Developer and Full-Stack Engineer with a focus on developing intelligent agents that solve real-world problems. I have experience in AI development (LangChain, OpenAI APIs) and building scalable web applications with Node.js, React, and MongoDB.</p>
+        <p>My passion lies in combining AI with automation to build systems that streamline tasks, enhance user experiences, and provide impactful solutions for businesses.</p>
+      </div>
+    </div>
+  </section>
+  
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="reveal">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">AI Agent Development</div>
+        <div class="skill-card">LangChain & OpenAI</div>
+        <div class="skill-card">Python (FastAPI, Automation)</div>
+        <div class="skill-card">JavaScript (Node.js, React.js)</div>
+        <div class="skill-card">Web Development (HTML, CSS, Tailwind)</div>
+        <div class="skill-card">MongoDB, GitHub, APIs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Build Section -->
+  <section id="what-i-build" class="reveal">
+    <div class="container">
+      <h2>What I Build</h2>
+      <p>
+        I focus on developing intelligent, scalable, and reliable systems. As an AI Agent Developer and Full-Stack
+        Engineer, my work revolves around empowering automation and building tech that solves real-world problems.
+      </p>
+      <ul class="build-list">
+        <li>🤖 AI Agents that understand and execute complex tasks</li>
+        <li>🌐 Full-stack applications using JavaScript, Python, and modern web technologies</li>
+        <li>🔗 API-powered tools and automation systems</li>
+        <li>📊 Intelligent dashboards and data-driven solutions</li>
+        <li>🧠 Custom productivity tools using AI and scripting</li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:pc03183337475@gmail.com">pc03183337475@gmail.com</a></p>
+      <p>LinkedIn: <a href="#">https://www.linkedin.com/in/prince-chouhan-89538535b/</a></p>
+      <p>GitHub: <a href="#">https://github.com/princechouhan3</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Prince Chouhan. All Rights Reserved. AI Agent Developer | Full-Stack Engineer | Problem Solver.</p>
+      <p>Built with passion for clean, efficient code.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const options = { threshold: 0.1 };
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active'); // Remove class when out of view
+        }
+      });
+    }, options);
+
+    reveals.forEach(reveal => {
+      observer.observe(reveal);
+    });
+
+    document.querySelector('.hero.reveal')?.classList.add('active');
+    
+  </script>
+
+</body>
+
+</html>
