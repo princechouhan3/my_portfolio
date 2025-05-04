@@ -230,10 +230,11 @@ footer p {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* border: 4px solid white;  ← remove this line */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* you can reduce or remove shadow too */
   flex-shrink: 0;
 }
+
 
 .about-text {
   flex: 1;
