@@ -335,18 +335,10 @@ footer p {
 }
 
 /* Hamburger styles */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  margin-left: auto;
-}
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: #333;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
