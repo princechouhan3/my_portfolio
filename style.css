@@ -10,10 +10,11 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top left, #ffd3ec, #d6d4fc); /* Lighter version of hero gradient */
-  color: #222;
+  background: linear-gradient(to right, #dfe9f3, #ffffff); /* Use any of the above */
+  color: #333;
   line-height: 1.6;
 }
+
 
 
 a {
@@ -49,7 +50,7 @@ h3 {
 
 /* Navigation */
 nav {
-  background: radial-gradient(circle at top left, #ffd3ec, #d6d4fc); /* Lighter version of hero gradient */
+  background: radial-gradient(circle at top left,  #e5fcdd,  #d5d4ee); /* Lighter version of hero gradient */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   padding: 1rem 0;
   position: sticky;
@@ -65,7 +66,7 @@ nav {
 
 .logo {
   font-size: 1.8rem;
-  color:#0077cc;
+  color:black;
   font-weight: 700;
 }
 
@@ -83,6 +84,7 @@ nav {
   padding: 0.5rem;
   border-radius: 6px;
   transition: background 0.3s;
+  color: black;
 }
 
 .nav-links a:hover {
@@ -97,8 +99,8 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: radial-gradient(circle at top left, #ff6ec4, #7873f5);
-  color: white;
+  background: radial-gradient(circle at top left, #e7f7bb, #e9e8ff);
+  color: rgb(20, 19, 19);
   text-align: center;
   padding: 6rem 1rem;
   border-radius: 0 0 16px 16px;
@@ -260,7 +262,7 @@ footer p {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   padding: 1.2rem; /* Less padding */
-  color: white;
+  color: black;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
   font-size: 0.95rem;
@@ -292,7 +294,7 @@ footer p {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: white;
+    background:white;
     padding: 1rem;
     position: absolute;
     top: 70px;
