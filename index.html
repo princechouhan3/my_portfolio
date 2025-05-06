@@ -23,13 +23,17 @@
     <div class="container nav-container">
       <h1 class="logo">Prince Chouhan</h1>
       <ul class="nav-links">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#what-i-build">What I Build</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
-
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
   </nav>
@@ -166,6 +170,16 @@
     document.querySelector('.hero.reveal')?.classList.add('active');
 
   </script>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
 
 </body>
 
