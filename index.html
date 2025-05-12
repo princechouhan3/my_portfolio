@@ -13,6 +13,14 @@
   <title>Prince Chouhan | AI Agent & Web Developer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -22,19 +30,22 @@
   <nav>
     <div class="container nav-container">
       <h1 class="logo">Prince Chouhan</h1>
-      <ul class="nav-links">
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+
+      <!-- Hamburger for mobile -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#what-i-build">What I Build</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#projects">Projects</a></li>
       </ul>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
   </nav>
 
@@ -79,26 +90,29 @@
   </section>
 
   <section id="projects" class="section reveal">
-    <h2 class="section-title">My Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Full Stack ToDo App</h3>
-        <p>A full-stack To-Do List app built with React, Node.js, Express, and MongoDB. Features task management, dark
-          mode, and a responsive UI.</p>
-        <a href="https://github.com/princechouhan3/fullstack-todo-app" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>A simple weather app that fetches real-time weather data using an API and displays it beautifully.</p>
-        <a href="https://github.com/princechouhan3/weather-app" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>This personal portfolio website built with HTML, CSS, and JavaScript.</p>
-        <a href="https://github.com/princechouhan3/my_portfolio" target="_blank">View on GitHub</a>
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Full Stack ToDo App</h3>
+          <p>A full-stack To-Do List app built with React, Node.js, Express, and MongoDB. Features task management, dark
+            mode, and a responsive UI.</p>
+          <a href="https://github.com/princechouhan3/fullstack-todo-app" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>A simple weather app that fetches real-time weather data using an API and displays it beautifully.</p>
+          <a href="https://github.com/princechouhan3/weather-app" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>This personal portfolio website built with HTML, CSS, and JavaScript.</p>
+          <a href="https://github.com/princechouhan3/my_portfolio" target="_blank">View on GitHub</a>
+        </div>
       </div>
     </div>
   </section>
+
 
 
   <!-- What I Build Section -->
@@ -126,8 +140,10 @@
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:pc03183337475@gmail.com">pc03183337475@gmail.com</a></p>
-      <p>LinkedIn: <a href="#">https://www.linkedin.com/in/prince-chouhan-89538535b/</a></p>
-      <p>GitHub: <a href="#">https://github.com/princechouhan3</a></p>
+      <p>LinkedIn: <a
+          href="https://www.linkedin.com/in/prince-chouhan-89538535b/">https://www.linkedin.com/in/prince-chouhan-89538535b/</a>
+      </p>
+      <p>GitHub: <a href="https://github.com/princechouhan3">https://github.com/princechouhan3</a></p>
     </div>
   </section>
 
@@ -173,12 +189,28 @@
 
   <script>
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
       navLinks.classList.toggle('active');
     });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
   </script>
+
 
 
 </body>
